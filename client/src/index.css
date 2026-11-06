@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  .input { @apply w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100; }
+  .btn { @apply rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white hover:bg-indigo-700 disabled:opacity-50; }
+  .btn-outline { @apply rounded-lg border border-slate-300 bg-white px-4 py-2 font-medium hover:bg-slate-100; }
+  .card { @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm; }
+  .badge { @apply rounded-full px-2 py-0.5 text-xs font-semibold; }
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0b1120;
+  color: #e2e8f0;
+}
+
+html.dark .card {
+  border-color: #334155;
+  background-color: #172033;
+  color: #e2e8f0;
+}
+
+html.dark .input {
+  border-color: #475569;
+  background-color: #111827;
+  color: #f1f5f9;
+}
+
+html.dark .input::placeholder {
+  color: #94a3b8;
+}
+
+html.dark .btn-outline {
+  border-color: #475569;
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+html.dark .btn-outline:hover {
+  background-color: #334155;
+}
+
+html.dark .bg-white {
+  background-color: #172033;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #0b1120;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #1e293b;
+}
+
+html.dark .border-slate-200,
+html.dark .border-slate-300,
+html.dark .border-t {
+  border-color: #334155;
+}
+
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark .text-slate-700,
+html.dark .text-slate-600 {
+  color: #e2e8f0;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #94a3b8;
+}
+
+html.dark .text-indigo-600 {
+  color: #a5b4fc;
+}
+
+html.dark .bg-indigo-50 {
+  background-color: #25264a;
+}
+
+html.dark .text-indigo-700 {
+  color: #c7d2fe;
+}
+
+html.dark .bg-green-100 {
+  background-color: #14532d;
+}
+
+html.dark .text-green-700 {
+  color: #bbf7d0;
+}
+
+html.dark .bg-amber-100 {
+  background-color: #713f12;
+}
+
+html.dark .text-amber-700 {
+  color: #fde68a;
+}
+
+html.dark .bg-red-100 {
+  background-color: #7f1d1d;
+}
+
+html.dark .text-red-700 {
+  color: #fecaca;
+}
